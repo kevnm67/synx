@@ -24,7 +24,7 @@ env:
     - RUBYGEMS_API_KEY="ADD_ENCRYPTED_ENV_VAR_KEY"
 
 before_install:
-  - curl http://curl.haxx.se/ca/cacert.pem -o /usr/local/share/cacert.pem
+  # - curl http://curl.haxx.se/ca/cacert.pem -o /usr/local/share/cacert.pem
   - source ~/.rvm/scripts/rvm
   # There is a bug in travis. When using system ruby, bundler is not
   # installed and causes the default install action to fail.
@@ -42,6 +42,7 @@ jobs:
     - stage: deploy
       name: Deploy Synx to rubygems
       rvm: 2.5.1
+      if: "branch = master OR (commit_message =~ /(@deploy synx)/) AND (type != pull_request)"
       script: echo "Deploying to ruby rubygems..."
       # deploy:
       #   provider: rubygems
@@ -52,4 +53,3 @@ jobs:
 stages:
   - test
   - deploy
-    if: "branch = master OR (commit_message =~ /(@deploy synx)/) AND (type != pull_request)"
