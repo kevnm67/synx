@@ -1,7 +1,9 @@
 ![synx logo](https://raw.githubusercontent.com/venmo/synx/marklarr/dev/docs/images/synx-logo.png?token=760261__eyJzY29wZSI6IlJhd0Jsb2I6dmVubW8vc3lueC9tYXJrbGFyci9kZXYvZG9jcy9pbWFnZXMvc3lueC1sb2dvLnBuZyIsImV4cGlyZXMiOjE0MDE5MzExNDF9--6c8a22318eaafed2185cb16d39189dcadb75c742)
 
 [![Gem Version](https://badge.fury.io/rb/synx.svg)](http://badge.fury.io/rb/synx)
- [![Build Status](https://travis-ci.org/venmo/synx.svg?branch=master)](https://travis-ci.org/venmo/synx)
+[![Build Status](https://travis-ci.org/venmo/synx.svg?branch=master)](https://travis-ci.org/venmo/synx)
+[![Maintainability](https://api.codeclimate.com/v1/badges/897e75589a7f5cb7b3d4/maintainability)](https://codeclimate.com/github/kevnm67/synx/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/897e75589a7f5cb7b3d4/test_coverage)](https://codeclimate.com/github/kevnm67/synx/test_coverage)
 
 A command-line tool that reorganizes your Xcode project folder to match your Xcode groups.
 
@@ -27,11 +29,11 @@ A command-line tool that reorganizes your Xcode project folder to match your Xco
 Execute the command on your project to have it reorganize the files on the file system:
 
      $ synx path/to/my/project.xcodeproj
-     
+
 It may have confused CocoaPods. If you use them, execute this command:
 
     $ pod install
-    
+
 You're good to go!
 
 ### Advanced

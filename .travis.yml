@@ -37,7 +37,7 @@ jobs:
       name: Ruby 2.5.1
       rvm: 2.5.1
       script:
-        - bundle exec rspec
+        - bundle exec rake spec
 
     - stage: deploy
       name: Deploy Synx to rubygems
